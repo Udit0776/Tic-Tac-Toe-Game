@@ -11,13 +11,11 @@ body{
 }
 
 .container {
-    border: 1px solid black;
     height: 70vh;
     width: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
 }
 
 .game{
@@ -29,7 +27,6 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
 
     /* for making gap we use gap */
     gap: 1.5vmin;
@@ -58,7 +55,6 @@ body{
 }
 
 .msg-container {
-    border: 1px solid black;
     margin: 5%;
 }
 
@@ -83,7 +79,6 @@ body{
 }
 
 .currentBox {
-    border: 1px solid black;
     margin: 5%;
     font-size: 4vmin
 }

@@ -48,10 +48,24 @@ boxes.forEach((box) =>{
     });
 });
 
+const disableBox =() => {
+    for(let box of boxes){
+        box.disabled = true;
+    }
+}
+
+const enableBox =() => {
+    for(let box of boxes){
+        box.disabled = false;
+        box.innerText = "";
+    }
+}
+
 const showWinner = (winner) => {
     // msg = console.log("Congratulation, Winner is Player X");
     msg.innerText = `Congratulation, Winner is Player ${winner}`;
     msgContainer.classList.remove("hide");
+    disableBox();
 }
 
 const checkWinner = () => {
@@ -77,3 +91,12 @@ const checkWinner = () => {
         }
     }
 }
+
+const resetGame = () => {
+    turnX = true;
+    enableBox();
+    msgContainer.classList.add("hide");
+}
+
+newGameBut.addEventListener("click",resetGame);
+resetBtn.addEventListener("click",resetGame);
